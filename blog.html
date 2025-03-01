@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="shortcut icon" href="assets/board.png" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="max-w-[1700px] mx-auto p-4">
+    <header class="bg-gray-100 p-4 rounded-xl">
+      <nav class="flex justify-between">
+        <div class="flex justify-center items-center gap-3">
+          <div>
+            <img class="w-10" src="assets/logo.png" alt="" />
+          </div>
+          <h2 class="text-3xl">Dev<span class="font-black">Board</span></h2>
+        </div>
+        <div class="flex justify-center items-center gap-6">
+          <button id="back-btn" class="btn btn-outline btn-info px-14">
+            Go Back
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="my-10">
+      <section>
+        <div class="border-l-4 border-purple-400 pl-3">
+          <h2 class="text-3xl text-cente capitalize">
+            <span class="text-sky-400">Welcome</span> to
+            <span class="text-purple-900">Blogs</span>
+            <span class="text-orange-400">section</span>
+          </h2>
+          <p class="text-cente text-xl mt-4 capitalize text-gray-600">
+            Flourish your dev career...
+          </p>
+        </div>
+        <div class="blog-container my-12">
+          <div class="space-y-5 border rounded-lg sm:p-8 shadow-lg my-5">
+            <h2 class="text-3xl font-semibold">
+              Question-1: What are the different ways to select an element in
+              the DOM?
+            </h2>
+            <hr class="border-2 border-dashed" />
+
+            <p class="text-gray-500">
+                Below are different methods to select an element in the DOM:<br /><br />
+
+              1. `document.getElementById()`: Selects an element with a specific id.<br /><br />
+              2. `document.getElementsByClassName()`: Selects all elements with a specific class.<br /><br />
+              3. `document.getElementsByTagName()`: Selects all elements with a specific tag name.<br /><br />
+              4. `document.querySelector()`: Selects the first matching element.<br /><br />
+              5. `document.querySelectorAll()`: Selects all matching elements.<br /><br />
+              6. `getElementById()` and `getElementsByClassName()`: Selects the first and all matching elements, respectively.
+            </p>
+          </div>
+          <div class="space-y-5 border rounded-lg sm:p-8 shadow-lg my-5">
+            <h2 class="text-3xl font-semibold">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </h2>
+            <hr class="border-2 border-dashed" />
+
+            <p class="text-gray-500">
+              The difference between innerHTML, innerText, and textContent is as
+              follows:<br /><br />
+
+              1. `innerHTML`: Provides and can modify an element's complete
+              content including HTML tags. It parses HTML and can execute
+              scripts when content is set.<br /><br />
+
+              2. `innerText`: Provides only human-readable text as displayed by
+              CSS output. It doesn't show hidden elements and doesn't parse HTML
+              tags.<br /><br />
+
+              3. `textContent`: Provides all text content of an element, even
+              content hidden by CSS. It doesn't parse HTML tags and doesn't
+              execute scripts.<br /><br />
+            </p>
+          </div>
+          <div class="space-y-5 border rounded-lg sm:p-8 shadow-lg my-5">
+            <h2 class="text-3xl font-semibold">
+              Question-3: What is event delegation in the DOM?
+            </h2>
+            <hr class="border-2 border-dashed" />
+
+            <p class="text-gray-500">
+                Event delegation is a JavaScript technique where we add a single event listener to a parent element instead of multiple listeners on individual child elements. It works because events "bubble up" from child to parent, allowing us to handle all child events efficiently.<br /><br />
+            </p>
+          </div>
+          <div class="space-y-5 border rounded-lg sm:p-8 shadow-lg my-5">
+            <h2 class="text-3xl font-semibold">
+              Question-4: What is event bubbling in the DOM?
+            </h2>
+            <hr class="border-2 border-dashed" />
+
+            <p class="text-gray-500">
+              Event bubbling is a mechanism in the DOM where an event triggered
+              on a nested element propagates upward through the DOM hierarchy to
+              its parent elements.<br /><br />
+              When an event occurs on an element (like a click on a button), the
+              event first runs on that element, then on its parent, then on its
+              grandparent, and so on through the entire hierarchy until it
+              reaches the root document object.<br /><br />
+              Key aspects of event bubbling:<br /><br />
+
+              Propagation order: From the target element upward to the document
+              root.<br /><br />
+              Event phases: The DOM event flow has three phases:<br /><br />
+
+              Capture phase: Event travels down to the element Target phase:
+              Event reaches the target element Bubbling phase: Event bubbles up
+              from the element<br /><br />
+
+              Stopping propagation: You can prevent an event from continuing to
+              bubble by using event.stopPropagation().<br /><br />
+            </p>
+          </div>
+          <div class="space-y-5 border rounded-lg sm:p-8 shadow-lg my-5">
+            <h2 class="text-3xl font-semibold">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </h2>
+            <hr class="border-2 border-dashed" />
+
+            <p class="text-gray-500">
+                In JavaScript, we create an element using document.createElement(), but it exists only in memory until added to the page with appendChild() or append(). We can modify it using properties like textContent, innerHTML, or setAttribute(). To remove an element, we use remove() to delete it directly or removeChild() to remove it through its parent.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   
+  </body>
+</html>
