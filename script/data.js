@@ -108,7 +108,7 @@ for (const data of datas) {
        <div class="w-[294px] h-[0px] border border-[#3752fd]/20 mt-4"></div>
 
         <div class="flex justify-between items-center mt-4">
-         <div class="text-[#00303c] text-base font-medium font-['Poppins'] tracking-wide">Deadline:<br />${data.deadline}</div>
+         <div class="text-[#00303c] text-medium font-medium font-['Poppins'] tracking-wide">Deadline:<br />${data.deadline}</div>
          
         
         <button id="status-btn-${index}" class="status-btn btn btn-info bg-[#3752fd] px-5 py-2.5  rounded-lg justify-center items-center gap-2.5 inline-flex text-white text-base font-medium font-['Poppins'] tracking-wide">Completed</div>
@@ -128,7 +128,7 @@ eventHandler("clear-history", function () {
 let taskAssigned = getElement("task-assigned");
 let tasksQuantity = datas.length;
 taskAssigned.innerText = `${tasksQuantity}`;
-// let innertext = getInnerText("task-assigned");
+
 for (let i = 0; i < datas.length; i++) {
     const btn = document.getElementById(`status-btn-${i + 1}`);
 
@@ -151,8 +151,8 @@ for (let i = 0; i < datas.length; i++) {
             this.setAttribute("disabled", "");
             let completedDiv = document.createElement("div");
             completedDiv.innerHTML = `
-  <h2 class="my-3 border border-red-400 shadow-md p-3 rounded-md bg-gray-50">
-    You have Completed The Task <span class="text-sky-400 text-xl font-semibold">${text} </span> at ${new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true })}
+  <h2 class="my-3 border border-black shadow-md p-3 rounded-md bg-gray-50">
+    You have Completed The Task <span class="text-black text-mediem font-semibold">${text} </span> at ${new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true })}
   </h2>
   `;
             getElement("sidebar-card-container").appendChild(completedDiv);
