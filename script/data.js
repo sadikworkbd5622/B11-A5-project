@@ -159,7 +159,7 @@ for (let i = 0; i < datas.length; i++) {
         });
     }
 }
-getElement("date").innerHTML = ` 
+getElement("u_date").innerHTML = ` 
   <span class="font-normal">${new Date().toLocaleDateString("en-US", { weekday: "short" })}
   </span>
   <br>
